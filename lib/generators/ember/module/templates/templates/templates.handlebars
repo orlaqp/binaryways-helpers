@@ -1,0 +1,20 @@
+
+<div class="Column C1">
+  <div class="well">
+    {{input type="text" value=filterString class="form-control" placeholder="search by <%= name_singular %>'s name"}}
+  </div>
+  <div>
+    <div class="list-group">    
+      {{#each <%= name_singular %> in filteredContent}}
+        {{#link-to "<%= name_singular %>" <%= name_singular %> class="list-group-item"}}
+          <h4 class="list-group-item-heading">{{<%= name_singular %>.propertyName}}</h4>          
+        {{/link-to}}  
+      {{/each}}
+    </div>    
+  </div>  
+</div>
+
+<div class="Column C2">  
+  {{outlet}}
+</div>
+  
