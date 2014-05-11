@@ -1,0 +1,27 @@
+<h1>Listing as</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>A</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @as.each do |a| %>
+      <tr>
+        <td><%= a.a %></td>
+        <td><%= link_to 'Show', a %></td>
+        <td><%= link_to 'Edit', edit_a_path(a) %></td>
+        <td><%= link_to 'Destroy', a, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New A', new_a_path %>
