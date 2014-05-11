@@ -1,5 +1,3 @@
-require 'rails'
-
 module Ember
   module Generators
 
